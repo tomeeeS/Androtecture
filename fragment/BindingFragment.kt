@@ -4,9 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
 
-abstract class BindingFragment : Fragment() {
+abstract class BindingFragment(@LayoutRes val layoutRes: Int = 0) : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,7 +23,8 @@ abstract class BindingFragment : Fragment() {
         onLayoutInit()
     }
 
-    abstract fun inflate(inflater: LayoutInflater, container: ViewGroup?): View
+    open fun inflate(inflater: LayoutInflater, container: ViewGroup?) =
+        inflater.inflate(layoutRes, container, false)
 
     // callback to initialize our layout and views exactly when necessary
     open fun onLayoutInit() {}
