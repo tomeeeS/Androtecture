@@ -1,4 +1,3 @@
-package org.bitbucket.tomeees.mondriaanpois.view.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
