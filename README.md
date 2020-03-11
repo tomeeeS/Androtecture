@@ -13,7 +13,7 @@ class PoiListFragment :
         val text1 = requireView().findViewById<TextView>(R.id.text1).apply { 
             text = "foo"
         }
-        // or with kotlin ktx (which allows us to use views from your layout easily and 
+        // or with Android ktx (which allows us to use views from your layout easily and 
         // type-safely without findViewById) :
         // text1.text = "foo"
     } 
