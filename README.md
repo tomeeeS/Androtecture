@@ -3,7 +3,7 @@ BaseFragment takes care of layout inflation and provides ``onLayoutInit``, a con
 
 Usage of BaseFragment:
 
-```
+```kotlin
 class PoiListFragment :
     BaseFragment(R.layout.fragment_poi_list)  // extend it, pass your layout
 {
@@ -13,7 +13,8 @@ class PoiListFragment :
         val text1 = requireView().findViewById<TextView>(R.id.text1).apply { 
             text = "foo"
         }
-        // or with kotlin ktx which allows us to use views from your layout easily and type-safely without findViewById:
+        // or with kotlin ktx (which allows us to use views from your layout easily and 
+        // type-safely without findViewById) :
         // text1.text = "foo"
     } 
     
