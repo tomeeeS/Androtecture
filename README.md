@@ -9,12 +9,14 @@ class PoiListFragment :
 {
 
     // use this callback to initialize your views. no need for onCreateView, onViewCreated.
-    override fun onLayoutInit() { 
-        city_list.adapter = CityListAdapter(this)
-        setSavedList()
-        swiperefresh.setOnRefreshListener { getPois() }
+    override fun onLayoutInit() {         
+        val text1 = requireView().findViewById<TextView>(R.id.text1).apply { 
+            text = "foo"
+        }
+        // or with kotlin ktx which allows us to use views from your layout easily and type-safely without findViewById:
+        // text1.text = "foo"
     } 
-    // you can also have kotlin ktx to use views from your layout easily and type-safely without findViewById.
+    
     ...
 }
 ```
