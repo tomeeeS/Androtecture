@@ -1,8 +1,9 @@
 ## Fragment
-BaseFragment takes care of 
+BaseFragment takes care of layout inflation and provides ``onLayoutInit``, a convenient callback to initialize your layout views in.
 
-``Usage of BaseFragment:
+Usage of BaseFragment:
 
+```
 class PoiListFragment :
     BaseFragment(R.layout.fragment_poi_list)  // extend it, pass your layout
 {
@@ -14,4 +15,6 @@ class PoiListFragment :
         swiperefresh.setOnRefreshListener { getPois() }
     } 
     // you can also have kotlin ktx to use views from your layout easily and type-safely without findViewById.
-``
+    ...
+}
+```
