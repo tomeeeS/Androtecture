@@ -4,8 +4,8 @@ BaseFragment takes care of layout inflation and provides ``onLayoutInit``, a con
 Usage of BaseFragment:
 
 ```kotlin
-class PoiListFragment :
-    BaseFragment(R.layout.fragment_poi_list)  // extend it, pass your layout
+class <YourFragment> :
+    BaseFragment(R.layout.<your_fragment_layout>)  // extend it, pass your layout
 {
 
     // use this callback to initialize your views. no need for onCreateView, onViewCreated.
